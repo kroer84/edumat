@@ -1,101 +1,134 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <title>Laravel</title>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ ('css/style.css') }}" rel="stylesheet">
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Styles -->
+    <style>
+        html,
+        body {
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: flex;
+            z-index: 99;
 
-            .position-ref {
-                position: relative;
-            }
+        }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        .position-ref {
+            position: relative;
+        }
 
-            .content {
-                text-align: center;
-            }
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 30px;
+        }
 
-            .title {
-                font-size: 84px;
-            }
+        .content {
+            text-align: center;
+        }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+        .title {
+            top: 30%;
+            margin-bottom: 30px;
+            position: fixed;
+            z-index: 99;
+            text-align: center;
+            border-style: solid;
+            border-color: white;
+            border-width: 10px;
+            padding: 0px 25px 0px 25px;
+        }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        .links>a {
+            color: #ffffff;
+            padding: 5px 25px 5px 25px;
+            margin: 0px 20px 0px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-style: solid;
+            border-color: white;
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
+        }
+        #titulo{
+            font-size: 200px;
+        }
+
+        #particleas-js {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="blue-gradient">
+    <div>
+        @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+            <a href="{{ url('/home') }}">Home</a>
+            @else
+            <a type="button" class="nav-link btn btn-primary btn-rounded waves-effect btn-sm z-depth-2" href="{{ route('login') }}">Login</a>
+
+            @if (Route::has('register'))
+            <a type="buttom" class="nav-link btn btn-default btn-rounded waves-effect btn-sm z-depth-2" href="{{ route('register') }}">Register</a>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-
-            </div>
+            @endauth
         </div>
-    </body>
+        @endif
+    </div>
+    <DIV id="particles-js" S>
+        <div class="content flex-center">
+
+            <div id="titulo" class="title z-depth-5">
+                ɛduΜατ
+            </div>
+
+        </div>
+    </DIV>
+    <script type="text/javascript" src="{{ ('js/jquery-3.4.1.min.js') }}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{ ('js/popper.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ ('js/bootstrap.min.js') }}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{ ('js/mdb.min.js') }}"></script>
+    <script>
+        if (screen.width <= 900)
+        document.getElementById('titulo').style.fontSize = '100px';
+    </script>
+
+
+
+    <script src="{{ asset('js/particles.js') }}"></script>
+    <script src="{{ asset('js/particulas.js') }}"></script>
+</body>
+
 </html>

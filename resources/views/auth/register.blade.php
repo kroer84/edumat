@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card glass">
+                <div class="card-header title text-center blue-gradient">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="matricula" class="col-md-4 col-form-label text-md-right">{{ __('matricula') }}</label>
+                            <label for="matricula" class="col-md-4 col-form-label text-md-right">{{ __('Matricula') }}</label>
 
                             <div class="col-md-6">
                                 <input id="matricula" type="number" class="form-control @error('matricula') is-invalid @enderror" name="matricula" value="{{ old('matricula') }}" required autocomplete="matricula">
@@ -79,8 +79,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-default btn-rounded waves-effect z-depth-2 btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>
