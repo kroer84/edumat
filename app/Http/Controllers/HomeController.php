@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\User;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function Conjuntos(){
+        return view('Conjuntos/Conjuntos');
+    }
+    public function Habilidad_Conjuntos(){
+        return view('Conjuntos/Habilidad_Conjuntos');
     }
 }
