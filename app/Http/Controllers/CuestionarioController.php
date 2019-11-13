@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\cuestionario;
+use App\preguntas;
 use Illuminate\Http\Request;
 
 class CuestionarioController extends Controller
@@ -14,7 +15,8 @@ class CuestionarioController extends Controller
      */
     public function index()
     {
-        //
+        $preguntas = preguntas::all()->where('cuestionario_id',1);
+        return view('Conjuntos/cuestionario',compact('preguntas'));
     }
 
     /**

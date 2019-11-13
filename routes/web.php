@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\Resources\Json\Resource;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Conjuntos', 'HomeController@Conjuntos')->name('Conjuntos');
 
 Route::get('/Conjuntos/Habilidad', 'HomeController@Habilidad_Conjuntos')->name('Habilidad_Conjuntos');
+
+Route::Resource('/cuestionario','CuestionarioController');
+
+Route::Resource('/preguntas','PreguntasController');

@@ -18,7 +18,7 @@
                             <div class="card col-md-1 float-left blue"style="position:fixed; left:  80px; top:177px;">
                                 <div class="card-body">
                                 <a type="button" class="btn rgba(0, 0, 0, 0.5) glass black-text waves-effect z-depth-3 font-weight-bold" href="{{ route('Habilidad_Conjuntos') }}" > <h6>Habilidad</h6> </a>
-                                <a type="button" class="btn rgba(0, 0, 0, 0.5) glass black-text waves-effect z-depth-3 font-weight-bold"> <h6>Evaluación </h6> </a>
+                                <a type="button" class="btn rgba(0, 0, 0, 0.5) glass black-text waves-effect z-depth-3 font-weight-bold" href="{{ route('cuestionario.index') }}"> <h6>Evaluación </h6> </a>
                                 
                                 </div>
                             </div>

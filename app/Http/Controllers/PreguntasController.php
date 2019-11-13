@@ -35,7 +35,9 @@ class PreguntasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->get(1));
+        
+        return 'respuestas';
     }
 
     /**
